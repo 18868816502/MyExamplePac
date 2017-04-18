@@ -18,7 +18,7 @@ import com.jonny.myexamplepac.Adapter.BezierViewPager;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     private Button bt_listViewPaging, bt_imageSwitcher, bt_ExpandableListView, bt_contextMenus, bt_popupWindow, bt_notifications, bt_anim, bt_phoneAdd, bt_webView, bt_intPic, bt_service,
-            bt_fragment, bt_volley, bt_telephonyManager, bt_shareContent, bt_jsonAnalysis, bt_gamePlayerManager, bt_bitmapSample, bt_media, bt_utils, bt_wave, bt_camera, bt_share, bt_diyCurveGraph,bt_bezierViewPager;
+            bt_fragment, bt_volley, bt_telephonyManager, bt_shareContent, bt_jsonAnalysis, bt_gamePlayerManager, bt_bitmapSample, bt_media, bt_utils, bt_wave, bt_camera, bt_share, bt_diyCurveGraph, bt_bezierViewPager, bt_elemaViewPager;
     private ImageView iv;
 
     @Override
@@ -84,6 +84,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         bt_diyCurveGraph.setOnClickListener(this);
         bt_bezierViewPager = (Button) findViewById(R.id.bt_bezierViewPager);
         bt_bezierViewPager.setOnClickListener(this);
+        bt_elemaViewPager = (Button) findViewById(R.id.bt_elemaViewPager);
+        bt_elemaViewPager.setOnClickListener(this);
 
 
     }
@@ -214,6 +216,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.bt_bezierViewPager:
                 intent = new Intent(this, BezierViewPagerActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.bt_elemaViewPager:
+                intent = new Intent(this, ElemaViewPagerActivity.class);
                 startActivity(intent);
                 break;
         }
